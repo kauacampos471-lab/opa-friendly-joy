@@ -22,10 +22,10 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: site-build
-          path: ./dist
+          path: ./.output/public
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: ./.output/public
 
   deploy:
     needs: build
